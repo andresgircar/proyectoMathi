@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="shortcut icon" href="./img/mathi.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet"> 
+    <title>Mathi | Asistente de Geometría</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img/mathi.svg" alt="mathi logo">
+            <a href="index.html">Mathi</a>
+        </div>
+        <p>Calculadora de figuras geométricas</p>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-bg">
+                <h1>¡Hola, soy Mathi! Para mí es un gusto ser tu asistente en el cálculo de figuras geométricas</h1>
+            </div>
+        </section>
+        <section class="figures">
+            <p class="title">Elije una de las figuras</p>
+            <div class="figures-container">
+                <div class="square">
+                    <p>Cuadrado</p>
+                    <a href="#squareID">
+                        <div></div>
+                    </a>
+                </div>
+                <div class="circle">
+                    <p>Círculo</p>
+                    <a href="#circleID">
+                        <div></div>
+                    </a>
+                </div>
+                <div class="triangle">
+                    <p>Triángulo</p>
+                    <a href="#triangleID">
+                        <div></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="figures-calc">
+            <div class="square-op-container" id="squareID">
+                <div class="square-op">
+                    <img src="./img/mathi.svg" alt="">
+                </div>
+                <div class="form-container">
+                    <h2>¡Calculemos el cuadrado!</h2>
+                    <p>Hallemos juntos el perímetro y el área de un cuadrado, recuerda que los cuadrados se caracterizan porque todos sus lados tienen la misma medida</p>
+                    <form>
+                        <div class="input-container">
+                            <label for="inputCuadrado">¿Dime, cuánto mide uno de los lados de tu cuadrado?</label>
+                            <input type="number" name="" id="inputCuadrado">
+                        </div>
+                        <div class="buttons-container">
+                            <button type="button" onclick="calcularPerimetroCuadrado()">Calcular perímetro</button>
+                            <button type="button" onclick="calcularAreaCuadrado()">Calcular área</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="circle-op-container" id="circleID">
+                <div class="form-container">
+                    <h2>¡Calculemos el círculo!</h2>
+                    <p>Hallemos juntos el perímetro, el área y el diámetro de un círculo</p>
+                    <form>
+                        <div class="input-container">
+                            <label for="inputCirculo">¿Dime, cuánto es el radio de tu círculo?</label>
+                            <input type="number" name="" id="inputCirculo">
+                        </div>
+                        <div class="buttons-container">
+                            <button type="button" onclick="calcularPerimetroCirculo()">Calcular perímetro</button>
+                            <button type="button" onclick="calcularAreaCirculo()">Calcular área</button>
+                            <button type="button" onclick="calcularDiametroCirculo()">Calcular Diámetro</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="circle-op">
+                    <img src="./img/mathi.svg" alt="">
+                </div>
+            </div>
+            <div class="triangle-op-container" id="triangleID">
+                <div class="triangle-op">
+                    <img src="./img/mathi.svg" alt="">
+                </div>
+                <div class="form-container">
+                    <h2>¡Calculemos el triángulo!</h2>
+                    <p>Hallemos juntos el perímetro y el área de un triángulo isósceles. Recuerda que este tipo de triángulos se caracterizan por tener dos de sus lados iguales.</p>
+                    <form>
+                        <div class="input-container">
+                            <label for="ladoA">Ingresa los siguientes datos de tu triángulo:</label>
+                            <input type="number" name="" id="ladoA" placeholder="Lado A">
+                            <input type="number" name="" id="ladoB" placeholder="Lado B">
+                            <input type="number" name="" id="base" placeholder="Base">
+                        </div>
+                        <div class="buttons-container">
+                            <button type="button" onclick="calcularPerimetroTriangulo()">Calcular perímetro</button>
+                            <button type="button" onclick="calcularAreaTriangulo()">Calcular área</button>
+                            <button type="button" onclick="calcularAlturaTriangulo()">Calcular altura</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="logo-footer">
+            <img src="./img/mathi.svg" alt="mathi logo">
+            <a href="index.html">Mathi</a>
+        </div>
+        <div class="footer-info">
+            <p>Diseño y desarrollo de Andrés Giraldo</p>
+            <a href="https://twitter.com/AndresGirC" target="_blank">Twitter: @AndresGirC</a>
+            <a href="https://github.com/andresgircar" target="_blank">Github: andresgircar</a>
+        </div>
+    </footer>
+    <script src="./JS/script.js"></script>
+</body>
+</html>

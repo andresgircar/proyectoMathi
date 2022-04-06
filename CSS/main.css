@@ -1,0 +1,479 @@
+:root {
+    /*Colors*/
+   --main-color: #4FB435;
+   --main-hero: rgba(79, 180, 53, 0.8);
+   --header-bg: rgba(186, 69, 69, 0.7);
+   --body-bg: #F4F3F3;
+   --gray: #E5E4E4;
+   --content-green: rgba(89, 176, 66, 0.8);
+   --font-icons-red: #EAD7D7;
+   --black: #000000;
+   --white: #ffffff;
+   --buttons-bg: #70F1D2;
+   --buttons-font: #28811A;
+   
+   /*Font sizes*/
+   --hero-font: 3.6rem;
+   --header-font: 2.4rem;
+   --logo: 3.2rem;
+   --lg: 2.4rem;
+   --md: 2.2rem;
+   --sm: 2rem;
+   --xs: 1.6rem;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Fredoka One', cursive;
+    font-family: 'Quicksand', sans-serif;
+}
+body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--body-bg);
+}
+/*Estilos del header*/
+header {
+    width: 100%;
+    background-color: var(--header-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Fredoka One', cursive;
+    position: relative;
+    z-index: 1;
+}
+header .logo {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+header .logo img {
+    width: 5.5rem;
+    padding-right: 10px;
+    margin: 5px 0;
+}
+header .logo a {
+    text-decoration: none;
+    color: var(--font-icons-red);
+    font-size: var(--logo);
+}
+header p {
+    color: var(--font-icons-red);
+    font-size: var(--lg);
+    margin: 14px 50px 14px 0;
+}
+/*main style, position made to combine the header and hero*/
+main {
+    width: 100%;
+    position: relative;
+    top: -6.5rem;
+}
+/*hero styles*/
+main .hero {
+    width: 100%;
+    height: 55rem;
+    background-image: url('../img/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+main .hero .hero-bg {
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-hero);
+    display: flex;
+    align-items: center;
+}
+main .hero .hero-bg h1 {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--white);
+    font-weight: 500;
+    font-size: var(--hero-font);
+}
+main .figures {
+    width: 60%;
+    background-color: var(--white);
+    border-radius: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+    top: -130px;
+}
+main .figures .title {
+    text-align: center;
+    font-size: var(--sm);
+    color: #565454;
+    margin: 25px 0 10px;
+}
+.figures .figures-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 15px;
+}
+.figures-container p {
+    font-family: 'Fredoka One', cursive;
+    font-size: var(--sm);
+    color: var(--main-color);
+    text-align: center;
+}
+.figures-container .square, .circle, .triangle {
+    margin-bottom: 50px;
+}
+.figures-container .square a div{
+    width: 100px;
+    height: 100px;
+    background-color: var(--font-icons-red);
+}
+.figures-container .circle a div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--font-icons-red);
+}
+.figures-container .triangle a div {
+    width: 0;
+    height: 0;
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+    border-bottom: 100px solid var(--font-icons-red);
+}
+/*operations boxes styles*/
+main .figures-calc {
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto;
+}
+/*square info container*/
+.figures-calc .square-op-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.figures-calc .square-op {
+    width: 50%;
+    background-color: var(--gray);
+    border-radius: 1.5rem;
+    display: flex;
+}
+.figures-calc .square-op img {
+    width: 20rem;
+    margin: 10rem 6rem;
+}
+.figures-calc .square-op-container .form-container {
+    width: 70%;
+    height: 32rem;
+    background-color: var(--content-green);
+    border-radius: 15px;
+    position: absolute;
+    right: 0;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+.form-container h2 {
+    text-align: center;
+    font-size: var(--lg);
+    color: var(--white);
+    margin: 0 0 20px;
+}
+.form-container p {
+    text-align: center;
+    font-size: var(--sm);
+    color: var(--white);
+}
+form input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0;
+}
+input[type=number] { 
+    -moz-appearance:textfield;
+}
+.form-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.form-container form .input-container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto 30px;
+}
+label {
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--white);
+    padding: 0 1.5rem 0 0;
+}
+input[type=number] {
+    width: 60%;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    padding: 0 20px;
+}
+input, textarea {
+    font-family: 'Quicksand', sans-serif;
+}
+form .buttons-container {
+    display: flex;
+    justify-content: center;
+}
+button {
+    width: auto;
+    font-size: var(--xs);
+    font-family: 'Quicksand', sans-serif;
+    border: none;
+    margin: 0 15px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: var(--buttons-bg);
+    color: var(--buttons-font);
+    cursor: pointer;
+}
+.figures-calc .circle-op-container {
+    margin-top: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.figures-calc .circle-op {
+    width: 50%;
+    background-color: var(--gray);
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+}
+.figures-calc .circle-op img {
+    width: 20rem;
+    margin: 10rem 6rem;
+}
+.figures-calc .circle-op-container .form-container {
+    width: 70%;
+    height: auto;
+    background-color: var(--content-green);
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+.figures-calc .triangle-op-container {
+    margin-top: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.figures-calc .triangle-op {
+    width: 50%;
+    background-color: var(--gray);
+    border-radius: 1.5rem;
+    display: flex;
+}
+.figures-calc .triangle-op img {
+    width: 20rem;
+    margin: 10rem 6rem;
+}
+.figures-calc .triangle-op-container .form-container {
+    width: 75%;
+    height: 32rem;
+    background-color: var(--content-green);
+    border-radius: 15px;
+    position: absolute;
+    right: 0;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+.figures-calc .triangle-op-container .form-container input {
+    width: 30%;
+    margin-right: 10px;
+}
+/*Estilos del footer*/
+footer {
+    width: 100vw;
+    height: auto;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+}
+footer .logo-footer {
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+}
+footer .logo-footer img {
+    width: 8rem;
+    padding-right: 10px;
+    margin: 5px 0;
+}
+footer .logo-footer a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--logo);
+}
+footer .footer-info p{
+    margin: 0 0 20px;
+    color: var(--white);
+    font-size: var(--sm);
+}
+.footer-info a {
+    display: inline-block;
+    color: var(--white);
+    font-size: 1.6rem;
+    text-decoration: none;
+    margin: 0 20px 30px;
+}
+/*MEDIA QUERIES*/
+/*TAMAÑO TABLET*/
+@media (max-width: 800px) {
+    header p {
+        margin: 14px 30px 14px 0;
+    }
+    main .hero .hero-bg h1 {
+        width: 60%;
+    }
+    main .figures {
+        width: 85%;
+        top: -100px;
+    }
+    .figures-calc .square-op,
+    .figures-calc .circle-op,
+    .figures-calc .triangle-op {
+        width: 60%;
+    }
+    .figures-calc .square-op img,
+    .figures-calc .circle-op img {
+        width: 13rem;
+        margin: 18rem 2rem;
+    }
+    .figures-calc .square-op-container .form-container,
+    .figures-calc .triangle-op-container .form-container {
+        height: auto;
+        padding: 2rem;
+    }
+    .form-container form {
+        width: 100%;
+    }
+    .form-container form .input-container {
+        flex-direction: column;
+        margin: 0 auto 10px;
+    }
+    label {
+        margin-bottom: 10px;
+        padding: 0;
+    }
+    input[type=number] {
+        width: 90%;
+    }
+    form .buttons-container {
+        width: 70%;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    button {
+        margin-bottom: 10px;
+    }
+    .figures-calc .triangle-op img {
+        width: 13rem;
+        margin: 24rem 2rem;
+    }
+    .figures-calc .triangle-op-container .form-container input {
+        margin: 0 0 10px;
+    }
+}
+@media (max-width: 690px) {
+    header p {
+        display: none;
+    }
+}
+@media (max-width: 550px) {
+    header .logo {
+        width: 90%;
+        margin: 0 20px;
+        justify-content: space-between;
+    }
+    main .hero .hero-bg h1 {
+        width: 70%;
+        font-size: 3rem;
+    }
+}
+@media (max-width: 500px) {
+    main .figures {
+        top: -90px;
+    }
+    .figures-container .square, .circle, .triangle {
+        margin-bottom: 25px;
+    }
+    main .figures .figures-container {
+        grid-template-columns: 1fr;
+    }
+    .figures-calc .square-op-container {
+        flex-direction: column;
+    }
+    .figures-calc .circle-op-container {
+        margin-top: 6rem;
+        height: 70rem;
+    }
+    .figures-calc .triangle-op-container {
+        margin-top: 2rem;
+        flex-direction: column;
+    }
+    .figures-calc .square-op,
+    .figures-calc .circle-op,
+    .figures-calc .triangle-op {
+        width: 90%;
+    }
+    .figures-calc .circle-op {
+        position: absolute;
+        top: 0;
+        right: 2rem;
+    }
+    .figures-calc .square-op img,
+    .figures-calc .circle-op img,
+    .figures-calc .triangle-op img {
+        width: 13rem;
+        margin: 2rem 2rem 2rem;
+    }
+    .figures-calc .square-op-container .form-container,
+    .figures-calc .triangle-op-container .form-container {
+        width: 100%;
+        position: relative;
+    }
+    .figures-calc .circle-op-container .form-container {
+        width: 100%;
+        position: absolute;
+        top: 170px;
+    }
+    form .buttons-container {
+        width: 100%;
+    }
+    .form-container form .input-container {
+        margin: 0 auto 20px;
+    }
+    button {
+        margin-bottom: 14px;
+    }
+    footer .footer-info p{
+        font-size: var(--xs);
+    }
+    .footer-info a {
+        font-size: 1.4rem;
+        margin: 0 10px 10px;
+    }
+}
